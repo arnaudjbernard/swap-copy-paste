@@ -1,0 +1,11 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Swap Copy-Paste'
+      'submenu': [
+        { 'label': 'Swap', 'command': 'swap-copy-paste:swap' }
+      ]
+    ]
+  }
+]
