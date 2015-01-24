@@ -8,11 +8,12 @@ module.exports =
 
     editor = atom.workspace.activePaneItem
     if(editor)
-      selection = editor.getSelection()
-      selectedText = selection.getText()
 
       clipboard = atom.clipboard
       clipboardText = clipboard.read()
 
-      clipboard.write(selectedText)
-      selection.insertText(clipboardText)
+      for selection in editor.getSelections()
+        selectedText = selection.getText()
+
+        clipboard.write(selectedText)
+        selection.insertText(clipboardText)
