@@ -6,7 +6,7 @@ module.exports =
   swap: ->
     # console.log "Swap copy paste!"
 
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActiveTextEditor()
     if(editor)
 
       clipboard = atom.clipboard
