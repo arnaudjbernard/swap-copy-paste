@@ -6,13 +6,14 @@ module.exports =
   swap: ->
     # console.log "Swap copy paste!"
 
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActiveTextEditor()
     if(editor)
-      selection = editor.getSelection()
-      selectedText = selection.getText()
 
       clipboard = atom.clipboard
       clipboardText = clipboard.read()
 
-      clipboard.write(selectedText)
-      selection.insertText(clipboardText)
+      for selection in editor.getSelections()
+        selectedText = selection.getText()
+
+        clipboard.write(selectedText)
+        selection.insertText(clipboardText)
