@@ -3,9 +3,9 @@
   "main": "./lib/swap-copy-paste",
   "version": "0.1.2",
   "description": "Swap the content of the clipboard with the selection",
-  "activationEvents": [
-    "swap-copy-paste:swap"
-  ],
+  "activationCommands": {
+      "atom-text-editor": ["swap-copy-paste:swap"]
+  },
   "repository": "https://github.com/arnaudjbernard/swap-copy-paste",
   "license": "MIT",
   "engines": {
