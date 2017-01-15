@@ -1,7 +1,7 @@
 module.exports =
 
   activate: (state) ->
-    atom.workspaceView.command "swap-copy-paste:swap", => @swap()
+    atom.commands.add 'atom-workspace', 'swap-copy-paste:swap', => @swap()
 
   swap: ->
     # console.log "Swap copy paste!"
