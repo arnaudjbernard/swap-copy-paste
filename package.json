@@ -11,7 +11,7 @@
   "repository": "https://github.com/arnaudjbernard/swap-copy-paste",
   "license": "MIT",
   "engines": {
-    "atom": ">0.99.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "dependencies": {}
 }
