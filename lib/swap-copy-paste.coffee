@@ -1,11 +1,8 @@
 module.exports =
-
   activate: (state) ->
     atom.commands.add 'atom-workspace', 'swap-copy-paste:swap', => @swap()
 
   swap: ->
-    # console.log "Swap copy paste!"
-
     editor = atom.workspace.getActiveTextEditor()
     if(editor)
 
